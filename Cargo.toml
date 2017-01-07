@@ -1,0 +1,6 @@
+[package]
+name = "pajamas"
+version = "0.1.0"
+authors = ["Dustin Farist <dustinfarist@users.noreply.github.com>"]
+
+[dependencies]
