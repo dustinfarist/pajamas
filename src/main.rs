@@ -1,20 +1,17 @@
 extern crate pajamas;
 
-use pajamas::Functor;
-
 fn main() {
-    let vi: Vec<i32> = vec![1, 2, 3];
-    let vs: Vec<String> = vi.map(|x| (x * 2).to_string());
-    println!("{:?} => {:?}", vi, vs);
-    // [1, 2, 3] => ["2", "4", "6"]
+    use pajamas::setoid::Setoid;
+    use pajamas::semigroup::Semigroup;
+    use pajamas::monoid::Monoid;
 
-    let oi: Option<i32> = Some(5);
-    let os: Option<String> = oi.map(|x| (x * 2).to_string());
-    println!("{:?} => {:?}", oi, os);
-    // Some(5) => Some("10")
+    let x: i32 = 5;
+    let y: i32 = 10;
 
-    let oi: Option<i32> = None;
-    let os: Option<String> = oi.map(|x| (x * 2).to_string());
-    println!("{:?} => {:?}", oi, os);
-    // None => None
+    println!("x = {}, y = {}", x, y);
+    println!("x == x is {}, x == y is {}", x.equals(&x), x.equals(&y));
+    println!("x.combine(y) is {}", x.combine(&y));
+
+    println!("x.combine(y).combine(i32::empty()) is {}", x.combine(&y).combine(&Monoid::empty()));
+    println!("\"hello\".to_string().combine(String::empty()) is {}", "hello".to_string().combine(&Monoid::empty()))
 }
