@@ -1,9 +1,9 @@
 extern crate pajamas;
 
 fn main() {
-    use pajamas::setoid::Setoid;
-    use pajamas::semigroup::Semigroup;
-    use pajamas::monoid::Monoid;
+    use pajamas::algebras::setoid::Setoid;
+    use pajamas::algebras::semigroup::Semigroup;
+    use pajamas::algebras::monoid::Monoid;
 
     let x: i32 = 5;
     let y: i32 = 10;

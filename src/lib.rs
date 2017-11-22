@@ -1,3 +1,1 @@
-pub mod monoid;
-pub mod semigroup;
-pub mod setoid;
+pub mod algebras;
