@@ -15,11 +15,3 @@ impl Monoid for String {
     "".to_string()
   }
 }
-
-mod pajamas {
-  mod algebras {
-    mod monoid {
-      
-    }
-  }
-}
